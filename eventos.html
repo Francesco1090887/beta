@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - My Delights</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="eventos-page">
+
+    <header>
+        <div class="header-container">
+            <div class="header-left">
+                <img src="imagenes/logo.png" alt="Logo My Delights" class="logo">
+                <h1 class="restaurant-title">My Delights</h1>
+            </div>
+
+            <nav class="top-nav">
+                <ul>
+                    <li><a href="index.html">Nuestro Menú</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="registro.html">Mi Cuenta</a></li>
+                    <li><a href="desarrolladores.html">Equipo de Desarrollo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <aside class="left-sidebar">
+            <h2>Eventos</h2>
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="#">Tipos de Eventos</a>
+                    <ul class="submenu">
+                        <li><a href="#" onclick="mostrarEvento('banquetes')">Banquetes</a></li>
+                        <li><a href="#" onclick="mostrarEvento('bufetes')">Bufetes</a></li>
+                        <li><a href="#" onclick="mostrarEvento('eventos_familiares')">Eventos Familiares</a></li>
+                        <li><a href="#" onclick="mostrarEvento('eventos_empresariales')">Eventos Empresariales</a></li>
+                        <li><a href="#" onclick="mostrarEvento('fiestas_privadas')">Fiestas Privadas</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+
+        <section class="content">
+            <h2>Detalles del Evento</h2>
+            <div id="detalle-evento" class="detalle-evento">
+                <p>Selecciona un evento para ver los detalles.</p>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="footer-content">
+            <p class="contact-info">
+                📧 <a href="mailto:info@mydelights.com">info@mydelights.com</a> | 📞 123 456 7890
+            </p>
+            <p>Síguenos en nuestras redes sociales:</p>
+            <div class="social-icons">
+                <a href="#" class="icon"><img src="imagenes/facebook-icon.png" alt="Facebook"></a>
+                <a href="#" class="icon"><img src="imagenes/instagram-icon.png" alt="Instagram"></a>
+                <a href="#" class="icon"><img src="imagenes/twitter-icon.png" alt="Twitter"></a>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro e Inicio de Sesión</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<header>
+    <div class="header-container">
+        <!-- Logo y Nombre del Restaurante a la Izquierda -->
+        <div class="header-left">
+            <img src="imagenes/logo.png" alt="Logo My Delights" class="logo">
+            <h1 class="restaurant-title">My Delights</h1>
+        </div>
+
+        <!-- Barra de Navegación Centrada -->
+        <nav class="top-nav">
+            <ul>
+                <li><a href="index.html">Nuestro Menú</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="registro.html">Mi Cuenta</a></li>
+                <li><a href="desarrolladores.html">Equipo de Desarrollo</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<body>
+    <div class="container">
+        <!-- Formulario de Registro -->
+        <div class="form-container">
+            <form id="clientForm">
+                <h1>Registro de Cliente</h1>
+                <p>Ingrese la información del cliente.</p>
+                <input type="text" id="clientId" placeholder="Número de Cédula" required />
+                <input type="text" id="clientName" placeholder="Nombre Completo" required />
+                <select id="clientGender" required>
+                    <option value="">Seleccione Sexo</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                </select>
+                <input type="date" id="clientBirthdate" required />
+                <input type="text" id="clientAddress" placeholder="Dirección" required />
+                <input type="tel" id="clientPhone" placeholder="Teléfono Celular" required />
+                <input type="email" id="clientEmail" placeholder="Correo Electrónico" required />
+                <button type="submit">Registrar Cliente</button>
+            </form>
+        </div>
+
+        <!-- Formulario de Inicio de Sesión -->
+        <div class="form-container sign-in-container">
+            <form id="loginForm">
+                <h1>Iniciar Sesión</h1>
+                <p>Use su correo y contraseña para ingresar.</p>
+                <input type="email" id="loginEmail" placeholder="Correo Electrónico" required />
+                <input type="password" id="loginPassword" placeholder="Contraseña" required />
+                <button type="submit">Ingresar</button>
+                <div class="forgot-password">
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p class="contact-info">
+                📧 <a href="mailto:info@mydelights.com">info@mydelights.com</a> | 📞 123 456 7890
+            </p>
+            <p>Síguenos en nuestras redes sociales:</p>
+            <div class="social-icons">
+                <a href="#" class="icon"><img src="imagenes/facebook-icon.png" alt="Facebook"></a>
+                <a href="#" class="icon"><img src="imagenes/instagram-icon.png" alt="Instagram"></a>
+                <a href="#" class="icon"><img src="imagenes/twitter-icon.png" alt="Twitter"></a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+

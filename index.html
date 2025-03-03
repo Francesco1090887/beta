@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Delights - Restaurante</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <header>
+        <div class="header-container">
+            <!-- Logo y Nombre del Restaurante a la Izquierda -->
+            <div class="header-left">
+                <img src="imagenes/logo.png" alt="Logo My Delights" class="logo">
+                <h1 class="restaurant-title">My Delights</h1>
+            </div>
+    
+            <!-- Barra de Navegación Centrada -->
+            <nav class="top-nav">
+                <ul>
+                    <li><a href="index.html">Nuestro Menú</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="registro.html">Mi Cuenta</a></li>
+                    <li><a href="desarrolladores.html">Equipo de Desarrollo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    
+    <main>
+        <aside class="left-sidebar">
+            <h2>Menú</h2>
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="#">Platos a la Carta</a>
+                    <ul class="submenu">
+                        <li onclick="mostrarPlato('plato1')">Plato 1</li>
+                        <li onclick="mostrarPlato('plato2')">Plato 2</li>
+                        <li onclick="mostrarPlato('plato3')">Plato 3</li>
+                        <li onclick="mostrarPlato('plato4')">Plato 4</li>
+                        <li onclick="mostrarPlato('plato5')">Plato 5</li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="#">Comida Típica</a>
+                    <ul class="submenu">
+                        <li class="submenu-item">
+                            <a href="#">Sopas</a>
+                            <ul class="sub-submenu">
+                                <li onclick="mostrarPlato('sopa_pollo')">Sopa de Pollo</li>
+                                <li onclick="mostrarPlato('sopa_res')">Sopa de Res</li>
+                                <li onclick="mostrarPlato('sopa_pescado')">Sopa de Pescado</li>
+                            </ul>
+                        </li>
+                        <li class="submenu-item">
+                            <a href="#">Principios</a>
+                            <ul class="sub-submenu">
+                                <li onclick="mostrarPlato('arroz')">Arroz</li>
+                                <li onclick="mostrarPlato('pasta')">Pasta</li>
+                                <li onclick="mostrarPlato('pure')">Puré de Papa</li>
+                            </ul>
+                        </li>
+                        <li class="submenu-item">
+                            <a href="#">Carnes</a>
+                            <ul class="sub-submenu">
+                                <li onclick="mostrarPlato('pollo')">Pollo</li>
+                                <li onclick="mostrarPlato('res')">Carne de Res</li>
+                                <li onclick="mostrarPlato('cerdo')">Cerdo</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        
+            <!-- Separador visual -->
+            <hr class="menu-divider">
+
+            <!-- Nueva sección de Bebidas -->
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="#">Bebidas</a>
+                    <ul class="submenu">
+                        <li class="submenu-item">
+                            <a href="#">Jugos</a>
+                            <ul class="sub-submenu">
+                                <li onclick="mostrarPlato('jugo_naranja')">Jugo de Naranja</li>
+                                <li onclick="mostrarPlato('jugo_mango')">Jugo de Mango</li>
+                                <li onclick="mostrarPlato('jugo_fresa')">Jugo de Fresa</li>
+                            </ul>
+                        </li>
+                        <li class="submenu-item">
+                            <a href="#">Gaseosas</a>
+                            <ul class="sub-submenu">
+                                <li onclick="mostrarPlato('coca_cola')">Coca Cola</li>
+                                <li onclick="mostrarPlato('pepsi')">Pepsi</li>
+                                <li onclick="mostrarPlato('sprite')">Sprite</li>
+                            </ul>
+                        </li>
+                        <li class="submenu-item">
+                            <a href="#">Bebidas Calientes</a>
+                            <ul class="sub-submenu">
+                                <li onclick="mostrarPlato('cafe')">Café</li>
+                                <li onclick="mostrarPlato('te')">Té</li>
+                                <li onclick="mostrarPlato('chocolate')">Chocolate Caliente</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+        
+        
+        <section class="content">
+            <h2>Detalles del Menú</h2>
+            <div id="detalle-plato" class="detalle-plato">
+                <p>Selecciona un elemento del menú para ver los detalles.</p>
+            </div>
+        </section>
+
+        <!-- Ícono del carrito flotante -->
+        <div id="cart-icon" onclick="toggleCart()">
+       🛒 <span id="cart-count">0</span>
+        </div>
+
+<!-- Contenedor del carrito -->
+<div id="cart-container">
+    <h3>🛒 Carrito de Compras</h3>
+    <ul id="cart-items"></ul>
+    <p>Total: <span id="cart-total">$0.00</span></p>
+    <button onclick="checkout()">Finalizar Compra</button>
+    <button onclick="toggleCart()">Cerrar</button>
+</div>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p class="contact-info">
+                📧 <a href="mailto:info@mydelights.com">info@mydelights.com</a> | 📞 123 456 7890
+            </p>
+            <p>Síguenos en nuestras redes sociales:</p>
+            <div class="social-icons">
+                <a href="#" class="icon"><img src="imagenes/facebook-icon.png" alt="Facebook"></a>
+                <a href="#" class="icon"><img src="imagenes/instagram-icon.png" alt="Instagram"></a>
+                <a href="#" class="icon"><img src="imagenes/twitter-icon.png" alt="Twitter"></a>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
+
